@@ -14,13 +14,10 @@ export default class PricingPageComponent {
   private meta = inject(Meta);
 
   ngOnInit() {
-    this.title.setTitle('Pricing');
-    this.meta.updateTag({ name: 'description', content: 'Pricing page description' });
-    this.meta.updateTag({ name: 'description', content: 'Pricing page description' });
-    this.meta.updateTag({ name: 'og:title', content: 'Pricing page description' });
-    this.meta.updateTag({ name: 'keywords', content: 'Precios, costs, pricing, precios, costos de, precios de' });
-
-
-
+    // this.title.setTitle('Pricing');
+    // this.meta.updateTag({ name: 'description', content: 'Pricing page description' });
+    // this.meta.updateTag({ name: 'description', content: 'Pricing page description' });
+    // this.meta.updateTag({ name: 'og:title', content: 'Pricing page description' });
+    // this.meta.updateTag({ name: 'keywords', content: 'Precios, costs, pricing, precios, costos de, precios de' });
   }
 }
