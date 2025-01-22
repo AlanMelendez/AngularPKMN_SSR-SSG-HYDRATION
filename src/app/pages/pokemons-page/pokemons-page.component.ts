@@ -19,8 +19,14 @@ export default class PokemonsPageComponent {
     //   this.isLoading.set(false);
     // }, 5000);
 
-    this.pokemonService.loadPage(1).subscribe((simplePokemons) => {
+    this.loadPokemons();
+  }
+
+  public loadPokemons(nextPage: number = 0) {
+    this.pokemonService.loadPage(nextPage).subscribe((simplePokemons) => {
       console.log('Simple Pokemons: ', simplePokemons);
     });
+
   }
+
  }
