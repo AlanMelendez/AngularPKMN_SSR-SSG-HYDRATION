@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, effect, input, signal } from '@angular/core';
 import { SimplePokemon } from '../../interfaces/simple-pokemon';
 
 @Component({
@@ -10,4 +10,8 @@ import { SimplePokemon } from '../../interfaces/simple-pokemon';
 })
 export class PokemonCardComponent {
   public pokemon = input.required<SimplePokemon>();
+  public readonly pokemonImg = computed(() => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemon().url}.png`);
+  logEffect = effect(() => {
+    console.log('Pokemon card: ', this.pokemon());
+  });
 }

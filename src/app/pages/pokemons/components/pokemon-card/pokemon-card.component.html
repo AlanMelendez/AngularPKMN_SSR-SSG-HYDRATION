@@ -2,12 +2,12 @@
   class="bg-blue-500 h-44 bg-opacity-25 rounded-lg shadow-md flex flex-col p-4 items-center justify-center cursor-pointer"
 >
 
-  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="pokemon" class="w-32 h-32"
+  <img [src]="pokemonImg()" [alt]="pokemon().name" class="w-32 h-32"
   >
 
   <div class="text-center mt-2">
     <h2 class="text-xl font-bold capitalize text-white">
-      Bulbasaur
+      {{ pokemon().name }}
     </h2>
   </div>
 
